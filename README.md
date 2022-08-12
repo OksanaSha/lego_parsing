@@ -7,8 +7,8 @@
 Два файла - по Москве и Питеру. Т.к. по заданию в csv-файле нет колонки **'city'**
 #### Как запустить
 python==3.9<br>
-**pip install --upgrade pip**<br>
-**pip install -r requirements.txt**<br>
-**python main.py**
-####Примечание
+`pip install --upgrade pip`<br>
+`pip install -r requirements.txt`<br>
+`python main.py`
+#### Примечание
 В коде использован **time.sleep** перед отправкой нового запроса. Это сделано, чтобы капризный API Детского мира не забанил как бота.
