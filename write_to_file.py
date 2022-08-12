@@ -1,9 +1,9 @@
-import json
 import csv
 import os
 
 
 FIELDNAMES = ['id', 'title', 'price', 'promo_price', 'url']
+
 
 def _get_price(item_data: dict) -> dict:
     if item_data['promo']:
@@ -37,13 +37,13 @@ def prepare_data(data: dict, region: str) -> dict:
             yield prepare_item_data
 
 
-def _create_csv(file_name):
+def _create_csv(file_name: str):
     with open(file_name, 'w') as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=FIELDNAMES, delimiter=',')
         writer.writeheader()
 
 
-def write_to_csv(file_name: str, data: dict, region: str):
+def write_to_csv(file_name: str, data: dict, region: str) -> bool:
     if not os.path.exists(file_name):
         _create_csv(file_name)
     items_data = [item for item in prepare_data(data, region)]
@@ -52,10 +52,3 @@ def write_to_csv(file_name: str, data: dict, region: str):
             writer = csv.DictWriter(csv_file, fieldnames=FIELDNAMES, delimiter=',')
             writer.writerows(items_data)
         return True
-
-
-# with open('lego_spb.csv', 'w') as csv_file:
-#     fieldnames = ['id', 'title', 'price', 'promo_price', 'url']
-#     writer = csv.DictWriter(csv_file, fieldnames=fieldnames, delimiter=',')
-#     writer.writeheader()
-#     writer.writerows([item for item in prepare_data(data, region='RU-SPE')])
