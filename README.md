@@ -17,5 +17,6 @@
 **pip install --upgrade pip**<br>
 **pip install -r requirements.txt**<br>
 **python main.py**
-####Примечание
+
+#### Примечание:
 В коде использован **time.sleep** перед отправкой нового запроса. Это сделано, чтобы капризный API Детского мира не забанил как бота.
