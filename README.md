@@ -6,7 +6,14 @@
 #### Выходные данные:
 Два файла - по Москве и Питеру. Т.к. по заданию в csv-файле нет колонки **'city'**
 #### Как запустить
-python==3.9<br>
+Для записи новых файлов удалить: старые или изменить названия при запуске  main.py
+- Docker<br>
+**docker build -t lego_parsing .**<br>
+**docker run lego_parsing**<br>
+
+
+- Python<br>
+**python==3.9**<br>
 **pip install --upgrade pip**<br>
 **pip install -r requirements.txt**<br>
 **python main.py**

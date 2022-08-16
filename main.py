@@ -50,9 +50,10 @@ def write_file(file_name: str, region: str):
             break
         offset += 30
         print(f'write items to {file_name}')
-        time.sleep(2) #sleep not to get banned as bot
+        time.sleep(2) # sleep not to get banned as bot
 
 
 if __name__ == '__main__':
+    # change file-names or delete .csv file to create new
     write_file('spb_lego.csv', 'RU-SPE')
     write_file('msk_lego.csv', 'RU-MOW')
